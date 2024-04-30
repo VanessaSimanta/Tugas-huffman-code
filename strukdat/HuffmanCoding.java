@@ -27,4 +27,20 @@ public class HuffmanCoding {
 
        //TheArrayList<String> ...​
        //... = .... getHuffmanCodes(..., ...);​
+       System.out.println("---------------------");
+       System.out.println(" Huruf | Huffman code ");
+       System.out.println("---------------------");
+       for(int i=0; i < ...; i++) {​
+
+        // //split setiap string di ArrayList untuk mendapatkan huruf dan Huffman codenya​
+        
+        // ...
+        
+        // //tampilkan huruf dan Huffman codenya​
+        
+        // ...
+        
+       }
+       System.out.println("---------------------");
 }
+

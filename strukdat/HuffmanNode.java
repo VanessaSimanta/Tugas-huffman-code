@@ -22,7 +22,7 @@ public class HuffmanNode extends Gnode<Integer, Character> {
             return;
         }
         printCode((HuffmanNode)node.llink, s + "1");
-        printCode((HuffmanNode)node.rlink, s +"1"); //traverse ke subtree kanan​
+        printCode(.......)//traverse ke subtree kanan​
     }
 }
 
