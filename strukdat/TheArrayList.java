@@ -3,29 +3,48 @@ package strukdat;
  * Generic Array List: Creating Our own version of Java's ArrayList
  * Generic Array List ini unchecked (weak typing) generic data type
  */
-
-public class TheArrayList <E> {
-    /*
-     * Prinsip Encapsulation dari OOP:
-     * 1. semua variabel dari class HARUS private
-     *    (hanya dapat diakses oleh classnya sendiri)
-     * 2. akses (set dan get) variabel melalui public method
-     *    yang dibuat di class ini.
-     */
-    Object[] thelist;
+public class TheArrayList<E> {
+    private static final int DEFAULT_CAPACITY = 10; // Default initial capacity
+    private Object[] thelist;
     private int n;
-    private int max_size;
 
-    //Constructor
-    public TheArrayList(int max_size) {
-        thelist = new Object[max_size];
+
+    // Constructor with custom initial capacity
+    public TheArrayList(int DEFAULT_CAPACITY) {
+        thelist = new Object[DEFAULT_CAPACITY];
         n = 0;
-        this.max_size = max_size;
     }
-    //mengembalikan ukuran maksimum array
-    public int maxSize() {
-        return max_size;
-    }
+
+
+// public class TheArrayList <E> {
+//     /*
+//      * Prinsip Encapsulation dari OOP:
+//      * 1. semua variabel dari class HARUS private
+//      *    (hanya dapat diakses oleh classnya sendiri)
+//      * 2. akses (set dan get) variabel melalui public method
+//      *    yang dibuat di class ini.
+//      */
+//     Object[] thelist;
+//     private static final int DEFAULT_CAPACITY = 10;
+//     private int n;
+//     private int max_size;
+//     public TheArrayList() {
+//         this(DEFAULT_CAPACITY); // Initialize with default capacity
+//     }
+//     //Constructor
+//     public TheArrayList(int initialCapacity) {
+//         thelist = new Object[initialCapacity];
+//         n = 0;
+//     }
+//     // public TheArrayList(int max_size) {
+//     //     thelist = new Object[max_size];
+//     //     n = 0;
+//     //     this.max_size = max_size;
+//     // }
+//     //mengembalikan ukuran maksimum array
+//     public int maxSize() {
+//         return max_size;
+//     }
     //mengembalikan jumlah elemen array
     //saat ini
     public int size() {
@@ -33,7 +52,7 @@ public class TheArrayList <E> {
     }
 
     private boolean isFull() {
-        if(n == max_size) return true;
+        if(n == DEFAULT_CAPACITY ) return true;
         else return false;
     }
 
@@ -41,7 +60,7 @@ public class TheArrayList <E> {
         if(n == 0) return true;
         else return false;
     }
-
+   
     public void add(E value) {
         if(!isFull()) {
             thelist[n] = value;
@@ -52,20 +71,20 @@ public class TheArrayList <E> {
         }
     }
 
-    public void add(int index, E value) {
-        if(index >= 0 && !isFull()) {
-            n = n + 1;
-            int i = n;
-            do {
-                thelist[i] = thelist[i-1];
-                i = i - 1;
-            }while(i > index);
-            thelist[index] = value;
-        }
-        else {
-            System.out.println("List sudah penuh!");
-        }
-    }
+    // public void add(int index, E value) {
+    //     if(index >= 0 && !isFull()) {
+    //         n = n + 1;
+    //         int i = n;
+    //         do {
+    //             thelist[i] = thelist[i-1];
+    //             i = i - 1;
+    //         }while(i > index);
+    //         thelist[index] = value;
+    //     }
+    //     else {
+    //         System.out.println("List sudah penuh!");
+    //     }
+    // }
 
     public void remove(int index) {
         if(index >= 0 && !isEmpty()) {
