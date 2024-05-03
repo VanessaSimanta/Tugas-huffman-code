@@ -12,17 +12,17 @@ public class HuffmanNode extends Gnode<Integer, Character> {
         String s = " ";
         codeList = new TheArrayList<String>(n);
         printCode(root, s);
-        return;
+        return codeList;
     }
 
     //print code (deretan bit)​
     public void printCode(HuffmanNode node, String s) {
-        if (...) {//jika node adalah child node​
+        if (node.rlink == null && node.llink == null) {//jika node adalah child node​
             codeList.add(node.data + " " + s);
             return;
         }
         printCode((HuffmanNode)node.llink, s + "1");
-        printCode(.......)//traverse ke subtree kanan​
+        printCode((HuffmanNode)node.rlink, s + "0");//traverse ke subtree kanan​
     }
 }
 
