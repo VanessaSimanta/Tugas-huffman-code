@@ -1,6 +1,5 @@
 package strukdat;
 
-
 public class HuffmanCoding {
     public static void main(String[] args) {
         char[] charArray = { 'E', 'T', 'N', 'I', 'S'};
@@ -35,12 +34,13 @@ public class HuffmanCoding {
        System.out.println("---------------------");
        System.out.println(" Huruf | Huffman code ");
        System.out.println("---------------------");
-       for(int i=0; i < huffmanCodes.size(); i++) {
+       for(int i = 0; i < huffmanCodes.size(); i++) {
         // split each string in ArrayList to get the character and Huffman code
-        String[] parts = huffmanCodes.get(i).split(":");
-    
+        String parts = huffmanCodes.get(i);
+        String[] kata = parts.split(" ");
+
         // display the character and Huffman code
-        System.out.println(parts[0] + " | " + parts[1]);
+        System.out.println(kata[0] + " | " + kata[1]);
     }  
        System.out.println("---------------------");
     }

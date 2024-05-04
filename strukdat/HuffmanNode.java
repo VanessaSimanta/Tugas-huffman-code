@@ -17,7 +17,11 @@ public class HuffmanNode extends Gnode<Integer, Character> {
 
     //print code (deretan bit)​
     public void printCode(HuffmanNode node, String s) {
-        if (node.rlink == null && node.llink == null) {//jika node adalah child node​
+        if (node == null) // Base case
+            return;
+        
+        // If it's a leaf node, add its character and code to the list
+        if (node.llink == null && node.rlink == null) {
             codeList.add(node.data + " " + s);
             return;
         }
