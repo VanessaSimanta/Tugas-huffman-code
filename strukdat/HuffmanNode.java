@@ -22,7 +22,7 @@ public class HuffmanNode extends Gnode<Integer, Character> {
         
         // If it's a leaf node, add its character and code to the list
         if (node.llink == null && node.rlink == null) {
-            codeList.add(node.data + " " + s);
+            codeList.add(node.data + ":" + s);
             return;
         }
         printCode((HuffmanNode)node.llink, s + "1");

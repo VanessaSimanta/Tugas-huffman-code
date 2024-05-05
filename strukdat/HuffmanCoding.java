@@ -37,7 +37,7 @@ public class HuffmanCoding {
        for(int i = 0; i < huffmanCodes.size(); i++) {
         // split each string in ArrayList to get the character and Huffman code
         String parts = huffmanCodes.get(i);
-        String[] kata = parts.split(" ");
+        String[] kata = parts.split(":");
 
         // display the character and Huffman code
         System.out.println(kata[0] + " | " + kata[1]);
