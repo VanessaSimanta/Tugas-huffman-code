@@ -279,27 +279,39 @@ public class Tree23Main {
    public static void main(String[] args) {
       Tree23<Integer, String> theTree = new Tree23<Integer, String>();
 
-      theTree.insert(50, "Fifty");
-      theTree.insert(40, "Forty");
-      theTree.insert(60, "Sixty");
-      theTree.insert(30, "Thirty");
-      theTree.insert(70, "Seventy");
+      theTree.insert(24, "Twenty-Four");
+      theTree.insert(41, "Forty-one");
+      theTree.insert(28, "Twenty-Eight");
+      theTree.insert(53, "Fifty-Three");
+      theTree.insert(85, "Eighty-five");
 
-      theTree.insert(21, "Twenty-One");
+      theTree.insert(57, "Fifty-seven");
+      theTree.insert(13, "Thirteen");
+      theTree.insert(31, "Thirty-one");
+      theTree.insert(74, "Seventy-four");
+      theTree.insert(27, "Twenty-seven");
+      theTree.insert(72, "Seventy-two");
+      theTree.insert(50, "Fifty");
+      theTree.insert(48, "Forty-Eight");
+      theTree.insert(5, "Five");
       theTree.insert(19, "Nineteen");
-      theTree.insert(65, "Sixty-Five");
-      theTree.insert(35, "Thirty-Five");
+      theTree.insert(97, "Ninety-seven");
+
+      theTree.insert(59, "Fifty-nine");
+      theTree.insert(16, "Sixteen");
+      theTree.insert(90, "Ninety");
+      theTree.insert(75, "Seventy-five");
       theTree.insert(18, "Eighteen");
-      theTree.insert(17, "Seventeen");
+
       theTree.displayTree();
 
-     theTree.delete(theTree.root, 40);
+     theTree.delete(theTree.root, 19);
       
-     int found = theTree.find(40);
+     int found = theTree.find(19);
      if (found != -1)
-        System.out.println("40 ditemukan di tree");
+        System.out.println("19 ditemukan di tree");
      else
-        System.out.println("40 tidak ditemukan di tree ");
+        System.out.println("19 tidak ditemukan di tree ");
         
      System.out.println("Tree setelah operasi delete:");
      theTree.displayTree();
